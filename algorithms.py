@@ -1,10 +1,13 @@
 #File for sorting algorithms
 import time
-import random 
 
-speed = .25
+
+def renderArray(arr):
+    for i in range (len(arr)):
+        print("%d" %arr[i]),
+
 # Bubble Sort
-def bubbleSort(arr):
+def bubbleSort(arr, speed):
     n = len(arr)
 
     #Traverse through all array elements
@@ -21,18 +24,4 @@ def bubbleSort(arr):
                 renderArray(arr)
                 time.sleep(speed)
 
-def renderArray(arr):
-    for i in range (len(arr)):
-        print("%d" %arr[i]),
 
-# Test array
-arr = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25]
-
-random.shuffle(arr)
-print(arr)
-time.sleep(2)
-bubbleSort(arr)
-
-print ('Sorted array is:')
-for i in range (len(arr)):
-    print("%d" %arr[i]),
