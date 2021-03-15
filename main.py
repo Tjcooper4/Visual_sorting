@@ -1,4 +1,4 @@
-from algorithms import bubbleSort
+from algorithms import selectionSort
 import random
 import time
 
@@ -28,7 +28,10 @@ print(speed)
 time.sleep(2)
 
 # Call bubbleSort function
-bubbleSort(arr, speed)
+#bubbleSort(arr, speed)
+
+# Call selection sort
+selectionSort(arr, speed)
 
 print ('Sorted array is:')
 for i in range (len(arr)):
