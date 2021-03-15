@@ -1,6 +1,8 @@
 #File for sorting algorithms
 import time
 import random 
+
+speed = .25
 # Bubble Sort
 def bubbleSort(arr):
     n = len(arr)
@@ -16,8 +18,12 @@ def bubbleSort(arr):
             #swap if the element found is greater than the next element
             if arr[j] > arr[j+1] :
                 arr[j], arr[j+1] = arr[j+1], arr[j]
-                print(arr)
-                time.sleep(.1)
+                renderArray(arr)
+                time.sleep(speed)
+
+def renderArray(arr):
+    for i in range (len(arr)):
+        print("%d" %arr[i]),
 
 # Test array
 arr = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25]
