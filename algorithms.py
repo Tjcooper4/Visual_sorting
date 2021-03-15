@@ -1,5 +1,6 @@
 #File for sorting algorithms
-
+import time
+import random 
 # Bubble Sort
 def bubbleSort(arr):
     n = len(arr)
@@ -15,10 +16,15 @@ def bubbleSort(arr):
             #swap if the element found is greater than the next element
             if arr[j] > arr[j+1] :
                 arr[j], arr[j+1] = arr[j+1], arr[j]
+                print(arr)
+                time.sleep(.1)
 
 # Test array
-arr = [64, 34, 25, 12, 22, 11, 90]
+arr = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25]
 
+random.shuffle(arr)
+print(arr)
+time.sleep(2)
 bubbleSort(arr)
 
 print ('Sorted array is:')
